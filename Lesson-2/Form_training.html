@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="dynamic_form.js"></script>
+  </head>
+  <body>
+    <form action="#" method="GET" style="width: 500px; margin: auto;">
+      <fieldset>
+        <h1 align="center">Анкета по недвижимости</h1>
+        <!-- CONTACTS -->
+        <fieldset align="center">
+          <legend>Контактные данные</legend>
+          <label>
+            Имя
+            <input type="text" name="" id="" />
+            <br />
+          </label>
+          <label>
+            Телефон
+            <input
+              type="text"
+              name="phone"
+              id="phone"
+              style="margin-right: 29px;"
+            />
+            <br />
+          </label>
+          <label>
+            Email
+            <input
+              type="email"
+              name="email"
+              id="email"
+              style="margin-right: 13px;"
+            />
+          </label>
+        </fieldset>
+        <!-- INTERESTS -->
+        <fieldset>
+          <legend align="center">Сфера интересов</legend>
+          <div style="float: left;">
+            Задача: <br />
+            <label>
+              <input
+                type="radio"
+                name="task"
+                id="rent_in"
+                style="margin: 10px 0;"
+                onclick="show_content(); hide_content();"
+              />
+              Снять квартиру
+              <br />
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="task"
+                id="rent_off"
+                style="margin: 10px 0;"
+                onclick="show_content(); hide_content();"
+              />
+              Сдать квартиру
+              <br />
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="task"
+                id="buy"
+                style="margin: 10px 0;"
+                onclick="show_content(); hide_content();"
+              />
+              Купить квартиру
+              <br />
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="task"
+                id="sell"
+                style="margin: 10px 0;"
+                onclick="show_content(); hide_content();"
+              />
+              Продать квартиру
+            </label>
+          </div>
+          <br />
+          <label id="money_lbl" hidden style="float: right;">
+            Бюджет(руб):
+            <input
+              type="number"
+              name="money"
+              id="money"
+              step="1000"
+              min="10000"
+            />
+            <br />
+          </label>
+          <label id="cost_lbl" hidden style="float: right;">
+            Стоимость(руб):
+            <input
+              type="number"
+              name="cost"
+              id="cost"
+              step="1000"
+              min="500000"
+            />
+          </label>
+        </fieldset>
+        <!-- PERSONAL INFO -->
+        <fieldset>
+          <legend align="center">Персональная информация</legend>
+          <label>
+            Возраст
+            <input type="number" name="age" id="age" min="18" />
+            <br />
+          </label>
+          <label id="scripted" hidden>
+            Есть ли животные?
+            <input type="radio" name="pets" id="pets" /> Да
+            <input type="radio" name="pets" id="pets" /> Нет
+            <br />
+          </label>
+          <label id="scripted2" hidden>
+            Количество арендующих:
+            <input type="number" name="prs_amnt" id="prs_amnt" />
+            <br />
+          </label>
+          <label id="scripted3" hidden>
+            Площадь квартиры(М^2):
+            <input type="number" name="area" id="area" />
+            <br />
+          </label>
+          <label id="scripted4" hidden>
+            Количество комнат:
+            <input type="number" name="rooms" id="rooms" />
+            <br />
+          </label>
+          <label>
+            Семейное положение:
+            <select name="marital_stat" id="marital_stat">
+              <option value="wife">Замужем</option>
+              <option value="husband">Женат</option>
+              <option value="nolife">Не женат/замужем</option>
+            </select>
+            <br />
+          </label>
+          <label>
+            Текущее место проживания
+            <input type="text" name="geolocation" id="geolocation" />
+            <br />
+          </label>
+          <label>
+            Пожелания
+            <textarea name="wishes" id="wishes" cols="50" rows="5"></textarea>
+          </label>
+        </fieldset>
+      </fieldset>
+    </form>
+  </body>
+</html>
